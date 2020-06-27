@@ -1,12 +1,12 @@
-$("#button").on("click", function (liquorRecipes) {
+$(".card-action1").on("click", function (liquorRecipes) {
   $(this);
 });
-$("#button").on("click", function (mealRecipes) {
+$(".card-action2").on("click", function (mealRecipes) {
   $(this);
 });
-$("#button").on("click", function (resetaurants) {
+$(".card-action3").on("click", function (resetaurants) {
   $(this);
 });
-$("#button").on("click", function (BAC) {
+$(".card-action4").on("click", function (BAC) {
   $(this);
 });
