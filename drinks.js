@@ -78,6 +78,49 @@ function createMixList(array) {
     drink_box_lists.append(div);
 }
 
+// drink API pull, populate, and render functions
+
+function drinkPull(text) {
+    queryURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + text
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+    }).then(function (response) {
+        console.log("raw api data", response);
+        var response_length = response.drinks.length - 1
+        var limit = 9
+        if (response_length < 9) {
+            limit = response_length;
+        }
+        drinks = [];
+        for (i = 0; i <= limit; i++) {
+            drinks.push(drinkParse(response.drinks[i]));
+        }
+        console.log('parsed api data', drinks);
+        drinkRender();
+    });
+}
+
+function drinkParse(object) {
+    var new_object = {};
+    new_object.name = object.strDrink;
+    new_object.img = object.strDrinkThumb;
+    new_object.id = object.idDrink;
+    return new_object;
+}
+
+function drinkRender() {
+    $("#drink_box_cocktails").empty();
+    for (i = 0; i < drinks.length; i++) {
+        var drink_item = drinks[i];
+        if (drink_item.name) {
+            var new_drink = makeColumn("col s12 m12", "fade-left").append(makeCard().append(makeCardImage(drink_item.img, drink_item.name)));
+            $("#drink_box_cocktails").append(new_drink);
+        }
+    }
+
+}
+
 // supporting HTML Object functions
 
 function makeRow() {
