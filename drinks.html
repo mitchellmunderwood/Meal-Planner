@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="drinks.css">
+    <title>Party Planning Committee</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li><a style="font-weight:bolder" href="#">Party Planning Committee</a></li>
+                    <li><a href="#">Drinks</a></li>
+                    <li><a href="#">BAC</a></li>
+                    <li><a href="#">Meals</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <!-- drink mix section -->
+            <div class="row" style="margin-left:0;">
+
+                <div id="drink_lists" style="width:100%" class="col s12 m12 l12">
+                    <!-- header -->
+                    <div id="drink_box" style="width:100%">
+                        <h5 id="drink_box_title" style="margin-right: 20px;">My Drink Mixes</h5>
+                        <a id="drinks_modal_open" class="waves-effect waves-light btn modal-trigger" href="#">New
+                            List</a>
+                    </div>
+
+                    <!-- mix lists -->
+                    <div id="drink_box_lists">
+                        <div class="mix_list">Whiskey</div>
+                        <div class="mix_list">Gin</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- cocktail option section -->
+            <div class="row" style="margin-left:0;">
+                <div id="drink_outputs" class="col s12 m12 l12">
+                    <div id="drink_box">
+                        <h5 style="margin-bottom:8px;">My Cocktail Options</h5>
+                    </div>
+                    <div id="drink_box_cocktails" class="container">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </main>
+
+    <!-- Drink Mix Modal -->
+    <div id="modal1" class="modal">
+
+        <!-- modal body -->
+        <div class="modal-content">
+
+            <h4>Make a New Mix</h4>
+
+            <div id="spirit_add">
+                <input id="spirit_add_text" type="text" placeholder="Add a spirit, then click Enter">
+            </div>
+
+            <div id="spirit_select">
+
+                <p class="spirit_item">
+                    <label class="checkbox_label">
+                        <input value="Whiskey" type="checkbox" class="filled-in" />
+                        <span>Whiskey</span>
+                    </label>
+                </p>
+
+                <p class="spirit_item">
+                    <label class="checkbox_label">
+                        <input value="Rum" type="checkbox" class="filled-in" />
+                        <span>Rum</span>
+                    </label>
+                </p>
+
+            </div>
+        </div>
+
+        <!-- modal footer -->
+        <div class="modal-footer">
+            <a id="drinks_modal_close" href="#!" class="modal-close waves-effect waves-green btn-flat">New Mix</a>
+            <a id="drinks_modal_cancel" href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='drinks.js'></script>
+    <script>AOS.init();</script>
+
+</body>
+
+</html>
