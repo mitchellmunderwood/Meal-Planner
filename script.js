@@ -31,13 +31,11 @@ submit_btnEl.on("click", function (event) {
 function BACcalc(gender, weight, drinks, time) {
   var r;
   if (gender === "male") {
-    r = 0.68;
+    r = 3.75;
   } else {
-    r = 0.55;
+    r = 4.7;
   }
-  var num = parseFloat(
-    ((drinks * 15) / (weight * 454 * r)) * 100 - time * 0.015
-  ).toFixed(2);
+  var num = parseFloat(((drinks * r) / weight - 0.017 * time).toFixed(2));
   if (num <= 0.01) {
     num = 0.0;
   }
