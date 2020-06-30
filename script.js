@@ -35,7 +35,7 @@ function BACcalc(gender, weight, drinks, time) {
   } else {
     r = 4.7;
   }
-  var num = parseFloat(((drinks * r) / weight).toFixed(2));
+  var num = parseFloat(((drinks * r) / weight - 0.017 * time).toFixed(2));
   if (num <= 0.01) {
     num = 0.0;
   }
