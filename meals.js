@@ -33,10 +33,11 @@ $("#meal_box_lists").on("click", function (event) {
 });
 
 meal_add_textEl.keydown(function (event) {
-  var name = spirit_add_textEl.val();
+  var name = meal_add_textEl.val();
+  console.log("hi");
   if (event.key === "Enter" && name !== "") {
-    spirit_select.append(createSpiritItem(name));
-    spirit_add_textEl.val("");
+    meal_select.append(createMealItem(name));
+    meal_add_textEl.val("");
   }
 });
 
@@ -47,7 +48,7 @@ function createMealItem(name) {
     .attr("class", "filled-in")
     .attr("value", name);
   var label = $("<label>");
-  var p = $("<p>").attr("class", "spirit_item");
+  var p = $("<p>").attr("class", "meal_item");
   label.append(input, span);
   p.append(label);
   return p;
