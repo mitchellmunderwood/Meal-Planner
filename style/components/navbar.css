@@ -1,14 +1,17 @@
-html,
-body {
-  margin: 0;
-}
-
 .mdc-drawer__header {
   min-height: 0px;
 }
 
-.mdc-drawer .mdc-drawer__title {
+.mdc-drawer .mdc-drawer__title a {
   color: #fc6c4f;
+}
+
+.mdc-drawer .mdc-list-item--activated {
+  color: #ff8c75;
+}
+
+.mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
+  color: #ff8c75;
 }
 
 #button:hover {

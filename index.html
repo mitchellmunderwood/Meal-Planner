@@ -33,26 +33,27 @@
 <body>
   <aside class="mdc-drawer mdc-drawer--modal">
     <div class="mdc-drawer__header">
-      <h3 class="mdc-drawer__title">Meal Planner</h3>
+      <h3 class="mdc-drawer__title"><a href="index.html" class="bland-link">Meal Planner</a></h3>
     </div>
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
-        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+        <a class="mdc-list-item" href="./meals.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">local_dining</i>
+          <span class="mdc-list-item__text">Meals</span>
+        </a>
+        <a class="mdc-list-item" href="./drinks.html" aria-selected="true">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">local_bar</i>
           <span class="mdc-list-item__text">Drinks</span>
         </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">local_dining</i>
-          <span class="mdc-list-item__text">Food</span>
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">speed</i>
-          <span class="mdc-list-item__text">BAC</span>
-        </a>
-        <a class="mdc-list-item" href="#">
+        <a class="mdc-list-item" href="./plans.html">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">list</i>
           <span class="mdc-list-item__text">Plans</span>
         </a>
+        <a class="mdc-list-item" href="./bac.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">speed</i>
+          <span class="mdc-list-item__text">BAC</span>
+        </a>
+        
       </nav>
     </div>
   </aside>
@@ -64,13 +65,13 @@
         <span class="mdc-top-app-bar__title" id="mobile-title">Meal Planner</span>
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" id="large-section-left">
-        <span class="mdc-top-app-bar__title" id="large-title"><a class="bland-link" href="">Meal Planner</a></span>
+        <span class="mdc-top-app-bar__title" id="large-title"><a class="bland-link" href="./index.html">Meal Planner</a></span>
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar" id="large-section-right">
-        <span class="mdc-top-app-bar__title"><a class="bland-link" href="">Food</a></span>
-        <span class="mdc-top-app-bar__title"><a class="bland-link" href="">Drink</a></span>
-        <span class="mdc-top-app-bar__title"><a class="bland-link" href="">BAC</a></span>
-        <span class="mdc-top-app-bar__title"><a class="bland-link" href=""></a>Plans</span>
+        <span class="mdc-top-app-bar__title"><a class="bland-link" href="./meals.html">Meals</a></span>
+        <span class="mdc-top-app-bar__title"><a class="bland-link" href="./drinks.html">Drinks</a></span>
+        <span class="mdc-top-app-bar__title"><a class="bland-link" href="./plans.html"></a>Plans</span>
+        <span class="mdc-top-app-bar__title"><a class="bland-link" href="./bac.html">BAC</a></span>
       </section>
     </div>
   </header> 
@@ -148,16 +149,17 @@
     <div class="container">
         <div class="row">
           <div class="col-md-7 py-4">
-            <h4 class="">Meal Planner</h4>
+            <h4 class=""><a class="bland-link-title" href="./index.html">Meal Planner</a></h4>
             <p class="text-muted">An easy way to discover meals and cocktails by ingredient and put together a delicous meal plan.</p>
           </div>
           <div class="col-md-2 offset-md-2 py-4">
             <h4>Navigation</h4>
             <ul class="list-unstyled">
-              <li>Food</li>
-              <li>Drink</li>
-              <li>BAC</li>
-              <li>Plans</li>
+              <li><a class="bland-link-footer" href="./meals.html">Meals</a></li>
+              <li><a class="bland-link-footer" href="./drinks.html">Drinks</a></li>
+              <li><a class="bland-link-footer" href="./plans.html">Plans</a></li>
+              <li><a class="bland-link-footer" href="./bac.html">BAC</a></li>
+              
             </ul>
           </div>
         </div>
