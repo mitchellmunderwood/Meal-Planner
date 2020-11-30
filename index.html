@@ -1,100 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <title>BAC Calc</title>
-
-  <style>
-    body,
-    html {
-      height: 100%;
-      width: 100%;
-    }
-
-    main {
-      min-height: 80%;
-      padding: 20px;
-    }
-
-    .row {
-      margin-bottom: 0;
-    }
-
-    #form {
-      height: 90%;
-    }
-
-    /* #male_radio,
-        #female_radio {
-            position: static;
-            opacity: 100;
-        } */
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <ul class="left">
-          <li><a style="font-weight:bolder" href="home.html">Party Planning Committee</a></li>
-          <li><a href="drinks.html">Drinks</a></li>
-          <li><a href="index.html">BAC</a></li>
-          <li><a href="meals.html">Meals</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m12 l12">
-          <div class="card" style="padding: 15px;">
-            <h3>BAC Calculator</h3>
-            <label for="">Gender</label><br />
-            <label>
-              <input id="male_radio" type="checkbox" class="filled-in" />
-              <span>Male</span>
-            </label>
-            <br />
-            <label>
-              <input id="female_radio" type="checkbox" class="filled-in" />
-              <span>Female</span>
-            </label>
-            <br />
-            <input type="number" id="weight" name="quantity" min="1" max="400" />
-            <label for="weight">Enter Weight</label>
-            <br />
-            <input type="number" id="drinkNum" name="quantity" min="1" max="20" />
-            <label for="drinkHum">Enter Number of Drinks</label>
-            <br />
-            <input type="number" id="drinkTime" name="quantity" min="1" max="24" />
-            <label for="drinkTime">Enter Time Period (Hrs)</label>
-            <br /><br />
-            <button id="submit_btn">Calculate</button>
-
-            <div id="results" data-aos="fade-up">
-              <h4 id="results_header"></h4>
-              <p id="results_text"></p>
-              <h5 id="results_bac"></h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="script.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  
 </body>
-
 </html>
