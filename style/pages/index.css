@@ -40,3 +40,7 @@ main {
 .card:hover p {
   color: #fc6c4f;
 }
+
+.bland-link-card:hover {
+  text-decoration: none;
+}
