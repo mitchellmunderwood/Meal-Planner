@@ -39,6 +39,11 @@ body {
 
 .bland-link:hover {
   color: white;
+  text-decoration: none;
+}
+
+.mdc-top-app-bar {
+  position: static;
 }
 
 @media screen and (max-width: 599px) {
