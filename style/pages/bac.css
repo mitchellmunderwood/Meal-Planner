@@ -1,0 +1,18 @@
+.card:hover {
+  box-shadow: none;
+  color: none;
+}
+
+.card:hover h3,
+.card:hover p {
+  color: #6c757d;
+}
+
+#submit_btn {
+  margin-bottom: 20px;
+  max-width: 100px;
+}
+
+input {
+  max-width: 300px;
+}
