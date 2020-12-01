@@ -6,12 +6,11 @@ var drinkTimeEl = $("#drinkTime");
 var submit_btnEl = $("#submit_btn");
 var resultsEl = $("#results");
 var resultsHeaderEl = $("#results_header");
-var resultstextEl = $("#results_text");
 var resultsBacEl = $("#results_bac");
 
 submit_btnEl.on("click", function (event) {
   event.preventDefault();
-
+    unsetWarning();
   var gender;
   if (maleRadioEl[0].checked) {
     gender = "male";
@@ -23,10 +22,39 @@ submit_btnEl.on("click", function (event) {
   var drinkNum = drinkNumEl.val();
   var drinkTime = drinkTimeEl.val();
 
-  var score = BACcalc(gender, weight, drinkNum, drinkTime);
-  console.log(score);
-  BACreturn(score);
+  if (inputCheck(maleRadioEl, femaleRadioEl, weight,drinkNum,drinkTime)) {
+      var score = BACcalc(gender, weight, drinkNum, drinkTime);
+      BACreturn(score);
+  } else {
+      setWarning();
+  }
+  clearForm();
 });
+
+function inputCheck(maleRadioEl, femaleRadioEl, weight, drinkNum, drinkTime) {
+    if (isNaN(weight)) {return false}
+    if (isNaN(drinkNum)) {return false}
+    if (isNaN(drinkTime)) {return false}
+    if (maleRadioEl[0].checked && femaleRadioEl[0].checked) {return false}
+    return true;
+}
+
+function setWarning() {
+    resultsEl.append("<div class='alert alert-danger' role='alert'>The form was filled out incorrectly.</div>")
+}
+
+function unsetWarning() {
+    $(".alert").remove();
+    resultsHeaderEl.val("");
+}
+
+function clearForm() {
+    maleRadioEl.prop("checked",false);
+    femaleRadioEl.prop("checked",false);
+    weightEl.val("");
+    drinkNumEl.val("");
+    drinkTimeEl.val("");
+}
 
 function BACcalc(gender, weight, drinks, time) {
   var r;
@@ -43,21 +71,14 @@ function BACcalc(gender, weight, drinks, time) {
 }
 
 function BACreturn(num) {
-  if (num >= 0.08) {
-    resultsHeaderEl.text("Stop Drinking!");
-    resultstextEl.text("You are legally intoxicted");
+    if (isNaN(num)) {return};
     resultsBacEl.text(num + "%");
-  } else if (num > 0.05 && num < 0.08) {
-    resultsHeaderEl.text("Slow Down");
-    resultstextEl.text(
-      "You are not legally intoxicted, but you are approaching the limit"
-    );
-    resultsBacEl.text(num + "%");
-  } else {
-    resultsHeaderEl.text("You're doing fine");
-    resultstextEl.text(
-      "You aren't close to being intoxicated. But keep an eye on things"
-    );
-    resultsBacEl.text(num + "%");
-  }
+
+        if (num >= 0.08) {
+            resultsHeaderEl.text("Don't Drive! You are legally intoxicated");
+        } else if (num > 0.05 && num < 0.08) {
+            resultsHeaderEl.text("You're just OK to drive, but be careful.");
+        } else {
+            resultsHeaderEl.text("You're good to drive!");
+        }
 }

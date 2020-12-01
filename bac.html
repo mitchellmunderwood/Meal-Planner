@@ -87,9 +87,9 @@
       <div class="row">
         <div class="col-sm-12 col-md-6 offset-md-3 md6">
           <div class="card" style="padding: 15px;">
-            <h3>BAC Calculator</h3>
+            <h3 id="bac-title">Know Your BAC</h3>
             <br />
-            <label for="">Gender</label>
+            <label for="">Select Gender</label>
             <label>
               <input id="male_radio" type="checkbox" class="filled-in" />
               <span>Male</span>
@@ -99,21 +99,20 @@
               <span>Female</span>
             </label>
             <br />
-            <input type="number" id="weight" name="quantity" min="1" max="400" />
             <label for="weight">Enter Weight</label>
+            <input type="number" id="weight" name="quantity" min="1" max="400" />
             <br />
-            <input type="number" id="drinkNum" name="quantity" min="1" max="20" />
             <label for="drinkHum">Enter Number of Drinks</label>
+            <input type="number" id="drinkNum" name="quantity" min="1" max="20" />
             <br />
-            <input type="number" id="drinkTime" name="quantity" min="1" max="24" />
             <label for="drinkTime">Enter Time Period in Hours</label>
+            <input type="number" id="drinkTime" name="quantity" min="1" max="24" />
             <br /><br />
             <button id="submit_btn">Calculate</button>
 
-            <div id="results" data-aos="fade-up">
+            <div id="results">
               <h5 id="results_bac"></h5>
               <h4 id="results_header"></h4>
-              <p id="results_text"></p>
             </div>
           </div>
         </div>

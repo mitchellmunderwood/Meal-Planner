@@ -9,10 +9,21 @@
 }
 
 #submit_btn {
-  margin-bottom: 20px;
+  color: #6c757d;
+  margin-bottom: 30px;
   max-width: 100px;
+  border: none;
+  border-radius: 5px;
+}
+
+#submit_btn:hover {
+  background: #feeae6;
+  color: #ff8c75;
 }
 
 input {
   max-width: 300px;
+}
+
+#bac-title {
 }
