@@ -10,6 +10,7 @@ var resultsBacEl = $("#results_bac");
 
 submit_btnEl.on("click", function (event) {
   event.preventDefault();
+    unsetPrior();
     unsetWarning();
   var gender;
   if (maleRadioEl[0].checked) {
@@ -45,7 +46,11 @@ function setWarning() {
 
 function unsetWarning() {
     $(".alert").remove();
-    resultsHeaderEl.val("");
+}
+
+function unsetPrior() {
+    resultsBacEl.text("");
+    resultsHeaderEl.text("");
 }
 
 function clearForm() {
